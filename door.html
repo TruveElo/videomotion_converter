@@ -26,15 +26,14 @@
   box-shadow: 2px 4px 6px rgba(0,0,0,0.5);
 }
 .door-panel {
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  height: 80%;
+  width: 80%;
+  height: 70%;
   background: #A0522D; /* lighter wood panel */
 }
 .hole {
-  width: 50%;
-  height: 50%;
   background: black;
   border-radius: 15px 15px 10px 10px;
   position: relative;
@@ -45,11 +44,9 @@
 .hole::before {
   content: '';
   position: absolute;
-  width: 90%;
-  height: 90%;
   background: black;
-  border-radius: 10%;
-  transform: translateX(-50%);
+  border-radius: 40%;
+  transform: translateX(-40%);
 }
 </style>
 </head>
