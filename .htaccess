@@ -1,1 +1,11 @@
 DirectoryIndex door.html
+
+# Allow access only to door.html
+<FilesMatch "^(door\.html)$">
+    Require all granted
+</FilesMatch>
+
+# Deny access to everything else
+<FilesMatch "^(?!door\.html$).*$">
+    Require all denied
+</FilesMatch>
