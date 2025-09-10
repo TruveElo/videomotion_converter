@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="/src/styles/tailwind.css" rel="stylesheet">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Game-Themed Login - Door Style</title>
+<title>Login</title>
 <style>
   body {
     background: #222;
@@ -93,9 +94,11 @@
   }
 </style>
 </head>
-<body>
+<body class="bg-yellow-50 font-serif text-gray-700 p-8 max-w-4xl mx-auto">
   <div class="door-login">
-    <h2>Enter the Door</h2>
+  <header class="mb-8 border-b-2 border-pink-200 pb-4">
+    <h1 class="text-3xl font-bold text-pink-300">Login to Enter</h1>
+ </header>
     <div class="keyhole"></div>
     <form id="loginForm">
       <input type="text" name="username" placeholder="Username" required autocomplete="off" />
