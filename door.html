@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Game-Themed Login - Door Style</title>
+<style>
+  body {
+    background: #222;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .door-login {
+    width: 320px;
+    height: 480px;
+    background: linear-gradient(to bottom, #654321 0%, #3a2210 100%);
+    border: 5px solid #3a2210;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #531a01 inset;
+    position: relative;
+    padding: 40px 30px;
+    box-sizing: border-box;
+  }
+  .door-login h2 {
+    color: #e6c16a;
+    text-align: center;
+    text-shadow: 2px 2px 5px #000;
+    margin-bottom: 30px;
+  }
+  .keyhole {
+    width: 60px;
+    height: 120px;
+    background: black;
+    border-radius: 30px 30px 20px 20px;
+    margin: 0 auto 30px;
+    position: relative;
+    box-shadow: inset 0 0 8px #5a4b3c;
+  }
+  .keyhole::before {
+    content: '';
+    position: absolute;
+    background: #e6c16a;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .keyhole::after {
+    content: '';
+    position: absolute;
+    background: #e6c16a;
+    width: 12px;
+    height: 50px;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 6px;
+  }
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 2px solid #e6c16a;
+    border-radius: 8px;
+    background: #3a2210;
+    color: #e6c16a;
+    font-size: 18px;
+    box-shadow: inset 0 0 10px #5a3a10;
+  }
+  input::placeholder {
+    color: #b89f46;
+  }
+  button {
+    width: 100%;
+    padding: 14px;
+    background: #b89f46;
+    border: none;
+    border-radius: 8px;
+    color: #3a2210;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #7a6a28;
+    transition: background 0.3s;
+  }
+  button:hover {
+    background: #e6c16a;
+  }
+</style>
+</head>
+<body>
+  <div class="door-login">
+    <h2>Enter the Door</h2>
+    <div class="keyhole"></div>
+    <form id="loginForm">
+      <input type="text" name="username" placeholder="Username" required autocomplete="off" />
+      <input type="password" name="password" placeholder="Password" required autocomplete="off" />
+      <button type="submit">Unlock</button>
+    </form>
+  </div>
+</body>
+</html>
