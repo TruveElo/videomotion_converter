@@ -13,8 +13,6 @@
     align-items: center;
   }
   .door {
-  justify-content: center;
-  align-items: center;
   width: 200px;
   height: 250px;
   background: #8B4513; /* brown door color */
@@ -25,14 +23,13 @@
   box-shadow: 2px 4px 6px rgba(0,0,0,0.5);
 }
 .door-panel {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 160px;
   height: 220px;
   background: #A0522D; /* lighter wood panel */
-  margin: 20px auto;
-  border-radius: 5px;
-  position: relative;
 }
 .hole {
   width: 30px;
